@@ -24,6 +24,6 @@
 - [x] 3.4. Build a reusable WhatsApp CTA component `src/components/WhatsAppCTA.astro` and integrate it into the Service and Blog pages.
 
 ### Phase 4: Testing
-4.1. Set up Vitest and related dependencies for the Astro testing environment.
-4.2. Write Vitest tests for the `<SEO />` component to verify accurate meta tag generation.
-4.3. Add tests to validate Astro dynamic routing logic for the blog collection and ensure routes render without errors.
+- [x] 4.1. Set up Vitest and related dependencies for the Astro testing environment.
+- [x] 4.2. Write Vitest tests for the `<SEO />` component to verify accurate meta tag generation.
+- [x] 4.3. Add tests to validate Astro dynamic routing logic for the blog collection and ensure routes render without errors.
