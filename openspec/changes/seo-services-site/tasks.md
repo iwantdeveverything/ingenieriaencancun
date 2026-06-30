@@ -13,9 +13,9 @@
 - [x] 1.3. Build a reusable `<SEO />` Astro component in `src/components/SEO.astro` for dynamic meta tags management.
 
 ### Phase 2: Content Architecture
-2.1. Define Astro Content Collections configuration in `src/content/config.ts`.
-2.2. Implement the Zod schema for the SEO Blog collection (title, description, date, author, image).
-2.3. Create sample blog markdown files in `src/content/blog/` to validate the defined schema.
+- [x] 2.1. Define Astro Content Collections configuration in `src/content/config.ts`.
+- [x] 2.2. Implement the Zod schema for the SEO Blog collection (title, description, date, author, image).
+- [x] 2.3. Create sample blog markdown files in `src/content/blog/` to validate the defined schema.
 
 ### Phase 3: Core Implementation
 3.1. Build the 4 Service pages (e.g., SEO Audits, Link Building, Content Strategy, Local SEO) under `src/pages/services/` using the base layout and Tech Luxury aesthetic.
