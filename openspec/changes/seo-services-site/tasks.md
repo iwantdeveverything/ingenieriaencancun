@@ -18,10 +18,10 @@
 - [x] 2.3. Create sample blog markdown files in `src/content/blog/` to validate the defined schema.
 
 ### Phase 3: Core Implementation
-3.1. Build the 4 Service pages (e.g., SEO Audits, Link Building, Content Strategy, Local SEO) under `src/pages/services/` using the base layout and Tech Luxury aesthetic.
-3.2. Implement the Blog list page at `src/pages/blog/index.astro` to display the content collection.
-3.3. Create dynamic Blog post routing and rendering at `src/pages/blog/[slug].astro`.
-3.4. Build a reusable WhatsApp CTA component `src/components/WhatsAppCTA.astro` and integrate it into the Service and Blog pages.
+- [x] 3.1. Build the 4 Service pages (e.g., SEO Audits, Link Building, Content Strategy, Local SEO) under `src/pages/services/` using the base layout and Tech Luxury aesthetic.
+- [x] 3.2. Implement the Blog list page at `src/pages/blog/index.astro` to display the content collection.
+- [x] 3.3. Create dynamic Blog post routing and rendering at `src/pages/blog/[slug].astro`.
+- [x] 3.4. Build a reusable WhatsApp CTA component `src/components/WhatsAppCTA.astro` and integrate it into the Service and Blog pages.
 
 ### Phase 4: Testing
 4.1. Set up Vitest and related dependencies for the Astro testing environment.

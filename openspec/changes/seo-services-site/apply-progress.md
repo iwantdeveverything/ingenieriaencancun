@@ -7,6 +7,10 @@
 - [x] 2.1. Defined Astro Content Collections configuration in `src/content/config.ts`.
 - [x] 2.2. Implemented the Zod schema for the SEO Blog collection (title, description, date, author, image).
 - [x] 2.3. Created a sample blog markdown file (`seo-in-2026.md`) in `src/content/blog/` to validate the defined schema.
+- [x] 3.1. Built the 4 Service pages and catalog index under `src/pages/services/` using the base layout and Tech Luxury aesthetic.
+- [x] 3.2. Implemented the Blog list page at `src/pages/blog/index.astro` to display the content collection.
+- [x] 3.3. Created dynamic Blog post routing and rendering at `src/pages/blog/[slug].astro`.
+- [x] 3.4. Built a reusable WhatsApp CTA component `src/components/WhatsAppCTA.astro` and integrated it into the Service and Blog pages.
 
 ## Files Created/Modified
 - `src/styles/global.css` (Created)
@@ -15,6 +19,15 @@
 - `src/content.config.ts` (Created/Migrated)
 - `src/content/blog/seo-in-2026.md` (Created)
 - `openspec/changes/seo-services-site/tasks.md` (Modified)
+- `src/components/WhatsAppCTA.astro` (Created)
+- `src/pages/services/index.astro` (Created)
+- `src/pages/services/seo-audits.astro` (Created)
+- `src/pages/services/local-seo.astro` (Created)
+- `src/pages/services/content-strategy.astro` (Created)
+- `src/pages/services/link-building.astro` (Created)
+- `src/pages/blog/index.astro` (Created)
+- `src/pages/blog/[slug].astro` (Created)
+- `openspec/changes/seo-services-site/apply-progress.md` (Modified)
 
 ## Fixes (Verification Phase 2)
 - Migrated `src/content/config.ts` to `src/content.config.ts` using the new `glob` loader to resolve `[LegacyContentConfigError]` in Astro 6+.

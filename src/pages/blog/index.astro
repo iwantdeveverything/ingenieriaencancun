@@ -1,0 +1,115 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import WhatsAppCTA from '../../components/WhatsAppCTA.astro';
+
+const posts = await getCollection('blog');
+
+// Sort by date (descending)
+posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const title = "SEO Insights & Blog | Ingeniería en Cancún";
+const description = "Latest trends, strategies, and updates in the world of SEO and digital marketing.";
+---
+
+<Layout title={title} description={description}>
+  <div class="blog-header">
+    <h1>Insights & Strategies</h1>
+    <p class="subtitle">Latest trends in SEO and tech luxury.</p>
+  </div>
+  
+  <div class="posts-grid">
+    {posts.map(post => (
+      <a href={`/blog/${post.id}`} class="post-card">
+        <div class="post-content">
+          <span class="post-date">{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <h2>{post.data.title}</h2>
+          <p>{post.data.description}</p>
+          <span class="read-more">Read Article &rarr;</span>
+        </div>
+      </a>
+    ))}
+  </div>
+  
+  <WhatsAppCTA />
+</Layout>
+
+<style>
+  .blog-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    padding-top: var(--space-xl);
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    background: linear-gradient(to right, #fff, var(--accent-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: var(--space-md);
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+  }
+  
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .post-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .post-card:hover {
+    border-color: var(--border-highlight);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(163, 113, 247, 0.1);
+  }
+  
+  .post-content {
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .post-date {
+    font-size: 0.85rem;
+    color: var(--accent-secondary);
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  
+  .post-card h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .post-card p {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    flex-grow: 1;
+  }
+  
+  .read-more {
+    color: var(--accent-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto;
+  }
+</style>

@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import WhatsAppCTA from '../../components/WhatsAppCTA.astro';
+
+const title = "SEO Services | Ingeniería en Cancún";
+const description = "Explore our premium SEO services designed to elevate your digital presence.";
+
+const services = [
+  {
+    title: "SEO Audits",
+    description: "Deep-dive analysis of your website's technical health and search performance.",
+    slug: "seo-audits"
+  },
+  {
+    title: "Local SEO",
+    description: "Dominate local search results and drive foot traffic in Cancún and beyond.",
+    slug: "local-seo"
+  },
+  {
+    title: "Content Strategy",
+    description: "Data-driven content plans that engage audiences and rank in search engines.",
+    slug: "content-strategy"
+  },
+  {
+    title: "Link Building",
+    description: "High-authority backlink acquisition to boost your domain authority.",
+    slug: "link-building"
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <div class="catalog-header">
+    <h1>Our SEO Services</h1>
+    <p class="subtitle">Premium strategies tailored for market dominance.</p>
+  </div>
+  
+  <div class="services-grid">
+    {services.map(service => (
+      <a href={`/services/${service.slug}`} class="service-card">
+        <h2>{service.title}</h2>
+        <p>{service.description}</p>
+        <span class="read-more">Explore Service &rarr;</span>
+      </a>
+    ))}
+  </div>
+  
+  <WhatsAppCTA />
+</Layout>
+
+<style>
+  .catalog-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    padding-top: var(--space-xl);
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    background: linear-gradient(to right, #fff, var(--accent-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: var(--space-md);
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .service-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: var(--space-xl);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-card:hover {
+    border-color: var(--border-highlight);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(163, 113, 247, 0.1);
+  }
+  
+  .service-card h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .service-card p {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    flex-grow: 1;
+  }
+  
+  .read-more {
+    color: var(--accent-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+</style>

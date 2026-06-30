@@ -1,0 +1,135 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import WhatsAppCTA from '../../components/WhatsAppCTA.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={`${post.data.title} | Blog | Ingeniería en Cancún`} description={post.data.description}>
+  <article class="blog-post">
+    <header class="post-header">
+      <div class="post-meta">
+        <span class="date">{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        <span class="separator">&bull;</span>
+        <span class="author">{post.data.author}</span>
+      </div>
+      <h1>{post.data.title}</h1>
+      {post.data.image && (
+        <img src={post.data.image} alt={post.data.title} class="hero-image" />
+      )}
+    </header>
+
+    <div class="post-content">
+      <Content />
+    </div>
+    
+    <div class="cta-container">
+      <WhatsAppCTA inline={true} message={`Hi, I'm interested in discussing topics from your article: ${post.data.title}`} text="Discuss this article" />
+    </div>
+  </article>
+
+  <WhatsAppCTA />
+</Layout>
+
+<style>
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: var(--space-xl);
+  }
+
+  .post-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .post-meta {
+    color: var(--accent-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .separator {
+    color: var(--text-secondary);
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    background: linear-gradient(to right, #fff, var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: var(--space-xl);
+    line-height: 1.2;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  .post-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+
+  .post-content :global(h2) {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .post-content :global(h3) {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .post-content :global(p) {
+    margin-bottom: var(--space-md);
+  }
+  
+  .post-content :global(a) {
+    color: var(--accent-primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .post-content :global(ul), .post-content :global(ol) {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+  }
+
+  .post-content :global(li) {
+    margin-bottom: var(--space-sm);
+  }
+
+  .cta-container {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+  }
+</style>
