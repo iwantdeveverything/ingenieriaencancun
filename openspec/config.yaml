@@ -7,8 +7,8 @@ context: |
   Style: default / tsconfig strict
 
 testing:
-  strict_tdd: false
-  runner: null
+  strict_tdd: true
+  runner: vitest
   coverage: null
   quality:
     linter: null

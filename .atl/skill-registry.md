@@ -1,47 +1,119 @@
 # Skill Registry
 
 ## Project Conventions
-- [/home/hstrejoluna/Projects/ingenieriaencancun/AGENTS.md](file:///home/hstrejoluna/Projects/ingenieriaencancun/AGENTS.md)
-- [/home/hstrejoluna/Projects/ingenieriaencancun/CONTRIBUTING.md](file:///home/hstrejoluna/Projects/ingenieriaencancun/CONTRIBUTING.md)
+
+- AGENTS.md: /home/hstrejoluna/Projects/ingenieriaencancun/AGENTS.md
+- CLAUDE.md: /home/hstrejoluna/Projects/ingenieriaencancun/CLAUDE.md
+
 
 ## Available Skills
 
-- **a11y-debugging** (Scope: Global)
-  Trigger: accessibility (a11y) debugging and auditing based on web.dev guidelines
-  Path: /home/hstrejoluna/.gemini/config/plugins/chrome-devtools-plugin/skills/a11y-debugging/SKILL.md
+### branch-pr
+**Scope**: global
+**Trigger**: Create Gentle AI pull requests with issue-first checks. Trigger: creating, opening, or preparing PRs for review.
+**Path**: `/home/hstrejoluna/.gemini/antigravity-cli/skills/branch-pr/SKILL.md`
 
-- **android-cli** (Scope: Global)
-  Trigger: Android development tasks including project creation, deployment, SDK management
-  Path: /home/hstrejoluna/.gemini/config/plugins/android-cli-plugin/skills/SKILL.md
+### chained-pr
+**Scope**: global
+**Trigger**: Trigger: PRs over 400 lines, stacked PRs, review slices. Split oversized changes into chained PRs that protect review focus.
+**Path**: `/home/hstrejoluna/.gemini/skills/chained-pr/SKILL.md`
 
-- **antigravity-guide** (Scope: Global)
-  Trigger: questions about how to use, configure, or customize Antigravity
-  Path: /home/hstrejoluna/.gemini/antigravity-cli/builtin/skills/antigravity_guide/SKILL.md
+### cognitive-doc-design
+**Scope**: global
+**Trigger**: Design docs that reduce cognitive load. Trigger: writing guides, READMEs, RFCs, onboarding, architecture, or review-facing docs.
+**Path**: `/home/hstrejoluna/.gemini/skills/cognitive-doc-design/SKILL.md`
 
-- **chrome-devtools** (Scope: Global)
-  Trigger: debugging web pages, automating browser interactions, analyzing performance
-  Path: /home/hstrejoluna/.gemini/config/plugins/chrome-devtools-plugin/skills/chrome-devtools/SKILL.md
+### comment-writer
+**Scope**: global
+**Trigger**: Write warm, direct collaboration comments. Trigger: PR feedback, issue replies, reviews, Slack messages, or GitHub comments.
+**Path**: `/home/hstrejoluna/.gemini/skills/comment-writer/SKILL.md`
 
-- **chrome-extensions** (Scope: Global)
-  Trigger: 'Chrome extension', 'browser extension', 'manifest.json'
-  Path: /home/hstrejoluna/.gemini/config/plugins/modern-web-guidance-plugin/skills/chrome-extensions/SKILL.md
+### frontend-design
+**Scope**: global
+**Trigger**: This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic AI slop aesthetics.
+**Path**: `/home/hstrejoluna/.gemini/antigravity-cli/skills/frontend-design/SKILL.md`
 
-- **debug-optimize-lcp** (Scope: Global)
-  Trigger: LCP performance, slow page loads, Core Web Vitals optimization
-  Path: /home/hstrejoluna/.gemini/config/plugins/chrome-devtools-plugin/skills/debug-optimize-lcp/SKILL.md
+### go-testing
+**Scope**: global
+**Trigger**: Trigger: Go tests, go test coverage, Bubbletea teatest, golden files. Apply focused Go testing patterns.
+**Path**: `/home/hstrejoluna/.gemini/antigravity-cli/skills/go-testing/SKILL.md`
 
-- **iwantdeveverything-repo-bootstrap** (Scope: Global)
-  Trigger: initialize new repo, levantar nuevo repo, crear repositorio, bootstrap repo
-  Path: /home/hstrejoluna/.gemini/config/skills/iwantdeveverything-repo-bootstrap/SKILL.md
+### issue-creation
+**Scope**: global
+**Trigger**: Create Gentle AI issues with issue-first checks. Trigger: creating GitHub issues, bug reports, or feature requests.
+**Path**: `/home/hstrejoluna/.gemini/antigravity-cli/skills/issue-creation/SKILL.md`
 
-- **memory-leak-debugging** (Scope: Global)
-  Trigger: high memory usage, OOM errors, or wants to analyze heapsnapshots
-  Path: /home/hstrejoluna/.gemini/config/plugins/chrome-devtools-plugin/skills/memory-leak-debugging/SKILL.md
+### jira-epic
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/jira-epic/SKILL.md`
 
-- **modern-web-guidance** (Scope: Global)
-  Trigger: HTML/CSS and clientside JS tasks (UI/Layout, Scroll/Motion, Performance)
-  Path: /home/hstrejoluna/.gemini/config/plugins/modern-web-guidance-plugin/skills/modern-web-guidance/SKILL.md
+### jira-task
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/jira-task/SKILL.md`
 
-- **troubleshooting** (Scope: Global)
-  Trigger: list_pages, new_page, or navigate_page fail
-  Path: /home/hstrejoluna/.gemini/config/plugins/chrome-devtools-plugin/skills/troubleshooting/SKILL.md
+### judgment-day
+**Scope**: global
+**Trigger**: Trigger: judgment day, dual review, adversarial review, juzgar. Run blind dual review, fix confirmed issues, then re-judge.
+**Path**: `/home/hstrejoluna/.gemini/antigravity-cli/skills/judgment-day/SKILL.md`
+
+### nextjs-15
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/nextjs-15/SKILL.md`
+
+### playwright
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/playwright/SKILL.md`
+
+### pr-governance
+**Scope**: global
+**Trigger**: Trigger: issue, PR, pull request, branch, commit, governance, merge, label, semver, conventional. Enforce project governance rules for issues, PRs, commits, and branches.
+**Path**: `/home/hstrejoluna/.gemini/antigravity-cli/skills/pr-governance/SKILL.md`
+
+### pytest
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/pytest/SKILL.md`
+
+### react-19
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/react-19/SKILL.md`
+
+### skill-creator
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/skill-creator/SKILL.md`
+
+### skill-improver
+**Scope**: global
+**Trigger**: Trigger: improve skills, audit skills, refactor skills, skill quality. Audit and upgrade existing LLM-first skills.
+**Path**: `/home/hstrejoluna/.gemini/skills/skill-improver/SKILL.md`
+
+### tailwind-4
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/tailwind-4/SKILL.md`
+
+### typescript
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/typescript/SKILL.md`
+
+### work-unit-commits
+**Scope**: global
+**Trigger**: Plan commits as reviewable work units. Trigger: implementation, commit splitting, chained PRs, or keeping tests and docs with code.
+**Path**: `/home/hstrejoluna/.gemini/skills/work-unit-commits/SKILL.md`
+
+### zod-4
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/zod-4/SKILL.md`
+
+### zustand-5
+**Scope**: global
+**Trigger**: >
+**Path**: `/home/hstrejoluna/.gemini/skills/gentleman-skills/curated/zustand-5/SKILL.md`
