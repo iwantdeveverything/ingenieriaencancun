@@ -1,0 +1,89 @@
+---
+// src/components/home/Hero.astro
+---
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Ingeniería de Software para tu Negocio en Cancún</h1>
+    <p class="hero-subtitle">Desarrollamos soluciones tecnológicas premium, escalables y a la medida para potenciar tus operaciones.</p>
+    <a href="https://wa.me/529983948293?text=Hola,%20me%20interesa%20una%20consultor%C3%ADa%20de%20software%20para%20mi%20negocio.%20%C2%A1Quiero%20algo%20ching%C3%B3n!" class="cta-button" data-ga-event="cta_click">
+      Hablemos de tu Proyecto
+    </a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0a0f1c 0%, #1a253a 100%);
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(64,124,255,0.1) 0%, rgba(0,0,0,0) 70%);
+    animation: rotateBackground 20s linear infinite;
+  }
+  @keyframes rotateBackground {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .hero-content {
+    max-width: 800px;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+  }
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #ffffff, #a0b5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+  }
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: #b0c4de;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #2563eb;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+  }
+  .cta-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
