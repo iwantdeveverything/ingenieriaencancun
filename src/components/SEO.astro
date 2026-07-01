@@ -36,4 +36,38 @@ const {
   
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${canonicalUrl}#organization`,
+        "name": "Ingeniería en Cancún",
+        "url": "https://ingenieriaencancun.com",
+        "logo": "https://ingenieriaencancun.com/favicon.svg",
+        "description": "Premium software development and SEO strategies tailored for businesses in Cancún and beyond."
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": `${canonicalUrl}#localbusiness`,
+        "name": "Ingeniería en Cancún",
+        "url": "https://ingenieriaencancun.com",
+        "telephone": "+529980000000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Centro",
+          "addressLocality": "Cancún",
+          "addressRegion": "Quintana Roo",
+          "postalCode": "77500",
+          "addressCountry": "MX"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 21.1619,
+          "longitude": -86.8515
+        }
+      }
+    ]
+  })} />
 </head>

@@ -14,6 +14,25 @@ const { title, description } = Astro.props;
 <html lang="es">
   <SEO title={title} description={description} />
   <body>
+    <!-- GA4 Tracking -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+
+      document.addEventListener('click', function(e) {
+        const target = e.target.closest('[data-ga-event="cta_click"]');
+        if (target) {
+          gtag('event', 'cta_click', {
+            event_category: 'engagement',
+            event_label: 'WhatsApp CTA',
+          });
+        }
+      });
+    </script>
+    
     <div class="glow-effect"></div>
     <main class="container">
       <slot />
