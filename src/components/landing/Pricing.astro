@@ -11,7 +11,7 @@ const dominioUrl = getPlanWhatsAppUrl('dominio');
     <div class="section-header">
       <span class="pre-title">PAQUETES Y PRECIOS</span>
       <h2 class="section-title">Elige el paquete ideal <br/>para hacer crecer tu negocio</h2>
-      <p class="section-desc">Planes claros en pesos mexicanos (MXN) adaptados al nivel de madurez y volumen de leads de tu negocio.</p>
+      <p class="section-desc">Planes claros en pesos mexicanos (MXN) con instalación única, adaptados a las necesidades de tu empresa.</p>
     </div>
 
     <div class="pricing-grid">
@@ -19,45 +19,59 @@ const dominioUrl = getPlanWhatsAppUrl('dominio');
       <div class="pricing-card">
         <div class="plan-header">
           <h3 class="plan-name">Impulso Digital</h3>
-          <p class="plan-desc">Ideal para negocios locales que quieren arrancar.</p>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">2,490</span>
-            <span class="period">/ MXN mes</span>
+          <p class="plan-desc">Para negocios que quieren empezar bien</p>
+          <div class="plan-price-container">
+            <span class="price-type">Instalación única</span>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="amount">3,490</span>
+              <span class="period">MXN</span>
+            </div>
           </div>
         </div>
         <ul class="plan-features">
-          <li>1 Chatbot de WhatsApp (Flujo Básico)</li>
-          <li>1 Campaña de Publicidad (Meta o Google)</li>
-          <li>Landing Page Optimizada</li>
-          <li>Reporte Mensual de Conversiones</li>
+          <li>1 landing page profesional</li>
+          <li>Integración a WhatsApp</li>
+          <li>IA básica en 1 canal principal</li>
+          <li>Respuestas automáticas 24/7</li>
+          <li>FAQ y respuestas de precio/info</li>
+          <li>3 posts por semana</li>
+          <li>1 campaña en Meta</li>
+          <li>Soporte y ajustes iniciales</li>
         </ul>
-        <a href={impulsoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-ga-event="cta_click">
-          Elegir Impulso Digital
+        <a href={impulsoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-icon" data-ga-event="cta_click">
+          <span class="icon">💬</span> Quiero Impulso
         </a>
       </div>
 
-      <!-- Plan 2: Crecimiento (Popular/Highlighted) -->
+      <!-- Plan 2: Crecimiento (Más vendido/Highlighted) -->
       <div class="pricing-card highlighted">
-        <div class="popular-tag">MÁS POPULAR</div>
+        <div class="popular-tag">Más vendido</div>
         <div class="plan-header">
-          <h3 class="plan-name">Crecimiento Automático</h3>
-          <p class="plan-desc">Para empresas que buscan automatizar la calificación de leads.</p>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">3,790</span>
-            <span class="period">/ MXN mes</span>
+          <h3 class="plan-name">Crecimiento Automatizado</h3>
+          <p class="plan-desc">Para negocios que quieren automatizar y escalar</p>
+          <div class="plan-price-container">
+            <span class="price-type">Instalación única</span>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="amount">4,790</span>
+              <span class="period">MXN</span>
+            </div>
           </div>
         </div>
         <ul class="plan-features">
-          <li>Chatbot Calificador Avanzado (WhatsApp + IG)</li>
-          <li>2 Campañas de Publicidad Activas</li>
-          <li>Integración Básica con CRM (Google Sheets)</li>
-          <li>Landing Page Premium con FAQs</li>
-          <li>Soporte Técnico Mensual</li>
+          <li>Todo lo del paquete Impulso</li>
+          <li>Landing optimizada para conversión</li>
+          <li>IA intermedia: mensajes + llamadas</li>
+          <li>Agenda de citas automática</li>
+          <li>Recordatorios automáticos</li>
+          <li>CRM básico + seguimiento auto</li>
+          <li>5 posts + 2 reels por semana</li>
+          <li>2 campañas Meta / Instagram</li>
+          <li>Optimización y remarketing básico</li>
         </ul>
-        <a href={crecimientoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-ga-event="cta_click">
-          Elegir Crecimiento Automático
+        <a href={crecimientoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon" data-ga-event="cta_click">
+          <span class="icon">💬</span> Quiero Crecimiento
         </a>
       </div>
 
@@ -65,22 +79,29 @@ const dominioUrl = getPlanWhatsAppUrl('dominio');
       <div class="pricing-card">
         <div class="plan-header">
           <h3 class="plan-name">Dominio 360</h3>
-          <p class="plan-desc">Automatización multicanal y estrategia de tráfico completa.</p>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">5,790</span>
-            <span class="period">/ MXN mes</span>
+          <p class="plan-desc">Para empresas que quieren vender en automático</p>
+          <div class="plan-price-container">
+            <span class="price-type">Instalación única</span>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="amount">5,290</span>
+              <span class="period">MXN</span>
+            </div>
           </div>
         </div>
         <ul class="plan-features">
-          <li>Automatización Multi-canal (WA, IG, FB)</li>
-          <li>Estrategia Completa Meta + Google Ads</li>
-          <li>Integración Completa con tu CRM (Hubspot/Zoho)</li>
-          <li>Embudo y Landing Page a Medida</li>
-          <li>Soporte Prioritario 24/7</li>
+          <li>Todo lo del paquete Crecimiento</li>
+          <li>IA de ventas avanzada</li>
+          <li>PDF automático de cotización</li>
+          <li>CRM completo con etiquetas</li>
+          <li>Catálogo interactivo</li>
+          <li>Escalado a humano + reportes</li>
+          <li>1 post diario + 4-6 reels/semana</li>
+          <li>Meta + Google Ads + Retargeting</li>
+          <li>Reporte semanal + soporte prioritario</li>
         </ul>
-        <a href={dominioUrl} target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-ga-event="cta_click">
-          Elegir Dominio 360
+        <a href={dominioUrl} target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-icon" data-ga-event="cta_click">
+          <span class="icon">💬</span> Quiero Dominio 360
         </a>
       </div>
     </div>
@@ -195,6 +216,20 @@ const dominioUrl = getPlanWhatsAppUrl('dominio');
     min-height: 40px;
   }
 
+  .plan-price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .price-type {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
   .plan-price {
     display: flex;
     align-items: baseline;
@@ -253,6 +288,17 @@ const dominioUrl = getPlanWhatsAppUrl('dominio');
     font-weight: 600;
     text-align: center;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  }
+
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .btn-icon .icon {
+    font-size: 1.1rem;
   }
 
   .btn-primary {

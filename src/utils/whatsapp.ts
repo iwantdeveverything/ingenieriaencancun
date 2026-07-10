@@ -1,9 +1,9 @@
 export const WHATSAPP_PHONE = "529983948293";
 
 export const PLAN_MESSAGES = {
-  impulso: "Hola, me interesa el plan Impulso Digital de $2490 MXN/mes",
-  crecimiento: "Hola, me interesa el plan Crecimiento Automático de $3790 MXN/mes",
-  dominio: "Hola, me interesa el plan Dominio 360 de $5790 MXN/mes"
+  impulso: "Hola, me interesa el plan Impulso Digital de $3,490 MXN (instalación única)",
+  crecimiento: "Hola, me interesa el plan Crecimiento Automatizado de $4,790 MXN (instalación única)",
+  dominio: "Hola, me interesa el plan Dominio 360 de $5,290 MXN (instalación única)"
 } as const;
 
 export type PlanKey = keyof typeof PLAN_MESSAGES;
