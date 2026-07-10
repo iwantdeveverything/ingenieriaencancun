@@ -8,16 +8,13 @@ Defines the Problem-Agitation-Solution component structure and copy guidelines f
 
 ### Requirement: PAS Component Structure
 
-The system MUST structure the homepage using semantic PAS components: Hero, ProblemAgitation, Solution, and CTA.
+The system MUST structure the homepage using semantic components: Navbar, Hero, FeatureGrid, DetailGrid, Pricing, HowItWorks, Testimonials, FAQ, CTABanner, and Footer.
+(Previously: The system MUST structure the homepage using semantic PAS components: Hero, ProblemAgitation, Solution, and CTA.)
 
 #### Scenario: User visits the homepage
-
 - GIVEN the user navigates to the root URL (`/`)
 - WHEN the page loads
-- THEN the Hero component MUST be displayed first
-- AND the ProblemAgitation component MUST be displayed next
-- AND the Solution component MUST follow
-- AND the CTA component MUST be displayed at the bottom
+- THEN the components MUST be displayed in the following sequential order: Navbar, Hero, FeatureGrid, DetailGrid, Pricing, HowItWorks, Testimonials, FAQ, CTABanner, and Footer
 
 ### Requirement: Premium UI and Typography
 

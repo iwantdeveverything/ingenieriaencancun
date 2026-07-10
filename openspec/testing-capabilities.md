@@ -1,20 +1,20 @@
 ## Testing Capabilities
 
-**Strict TDD Mode**: disabled
-**Detected**: 2026-06-30
+**Strict TDD Mode**: enabled
+**Detected**: 2026-07-10
 
 ### Test Runner
 
-- Command: `null`
-- Framework: null
+- Command: `pnpm test`
+- Framework: vitest
 
 ### Test Layers
 
-| Layer       | Available | Tool        |
-| ----------- | --------- | ----------- |
-| Unit        | ❌   | — |
-| Integration | ❌   | — |
-| E2E         | ❌   | — |
+| Layer | Available | Tool |
+| --- | --- | --- |
+| Unit | ✅ | vitest |
+| Integration | ❌ | — |
+| E2E | ❌ | — |
 
 ### Coverage
 
@@ -23,8 +23,8 @@
 
 ### Quality Tools
 
-| Tool         | Available | Command        |
-| ------------ | --------- | -------------- |
-| Linter       | ❌   | — |
-| Type checker | ✅   | tsc |
-| Formatter    | ❌   | — |
+| Tool | Available | Command |
+| --- | --- | --- |
+| Linter | ❌ | — |
+| Type checker | ✅ | tsc |
+| Formatter | ❌ | — |

@@ -1,0 +1,254 @@
+---
+// src/components/landing/Testimonials.astro
+---
+
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="pre-title">CASOS DE ÉXITO</span>
+      <h2 class="section-title">Porque nuestros clientes <br/><span>eligen Ingeniería en Cancún</span></h2>
+      <p class="section-desc">Testimonios de negocios locales que transformaron su operación diaria con nuestras automatizaciones.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"El equipo de Ingeniería en Cancún siempre está atento a que las integraciones funcionen. Automatizar la respuesta nos dio una tranquilidad que vale oro en el día a día."</p>
+        <div class="author">
+          <div class="avatar-icon">🏠</div>
+          <div>
+            <h4 class="author-name">Carlos Mendoza</h4>
+            <p class="author-role">Director de Real Estate Cancún</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card highlighted">
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"Filtrar y calificar prospectos automáticamente por WhatsApp nos devolvió más de 3 horas libres al día. No volvemos a responder mensajes repetitivos nunca más."</p>
+        <div class="author">
+          <div class="avatar-icon">🔧</div>
+          <div>
+            <h4 class="author-name">Sofía Ramos</h4>
+            <p class="author-role">Fundadora de Climafácil Cancún</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"Responder al instante a cada lead de Facebook Ads duplicó nuestra tasa de conversión. El bot agenda citas en automático incluso mientras dormimos."</p>
+        <div class="author">
+          <div class="avatar-icon">🎓</div>
+          <div>
+            <h4 class="author-name">Alejandro Ortiz</h4>
+            <p class="author-role">Gerente de Cursos Riviera</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials-pillars">
+      <div class="pillar-item">
+        <div class="pillar-icon">🤝</div>
+        <div>
+          <h4 class="pillar-title">Soporte constante</h4>
+          <p class="pillar-desc">Monitoreamos el estado de tus bots de forma activa.</p>
+        </div>
+      </div>
+
+      <div class="pillar-item">
+        <div class="pillar-icon">⏱️</div>
+        <div>
+          <h4 class="pillar-title">Ahorro de tiempo</h4>
+          <p class="pillar-desc">Libera a tu equipo de responder preguntas frecuentes.</p>
+        </div>
+      </div>
+
+      <div class="pillar-item">
+        <div class="pillar-icon">📈</div>
+        <div>
+          <h4 class="pillar-title">Incremento en ventas</h4>
+          <p class="pillar-desc">La velocidad de respuesta es el factor #1 de cierre.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    padding: 6rem 1.5rem;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    background-image: radial-gradient(circle at 90% 80%, rgba(45, 212, 191, 0.02) 0%, transparent 40%);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+
+  .pre-title {
+    color: var(--accent-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-title span {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .testimonial-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .testimonial-card:hover {
+    border-color: rgba(163, 113, 247, 0.3);
+    transform: translateY(-3px);
+  }
+
+  .testimonial-card.highlighted {
+    border-color: var(--border-highlight);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(163, 113, 247, 0.02) 100%);
+  }
+
+  .rating {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .quote {
+    color: var(--text-primary);
+    font-size: 0.975rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.25rem;
+  }
+
+  .avatar-icon {
+    width: 42px;
+    height: 42px;
+    background: var(--bg-elevated);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .author-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+  }
+
+  .author-role {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* Testimonials Pillars */
+  .testimonials-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 4rem;
+  }
+
+  .pillar-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .pillar-icon {
+    font-size: 1.75rem;
+    background: rgba(163, 113, 247, 0.08);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid rgba(163, 113, 247, 0.15);
+  }
+
+  .pillar-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: #ffffff;
+  }
+
+  .pillar-desc {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 992px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .testimonials-pillars {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding-top: 3rem;
+    }
+  }
+</style>

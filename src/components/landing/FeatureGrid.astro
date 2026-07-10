@@ -1,0 +1,183 @@
+---
+// src/components/landing/FeatureGrid.astro
+---
+
+<section id="features" class="feature-grid-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="pre-title">SERVICIOS Y SOLUCIONES</span>
+      <h2 class="section-title">Todo lo que tu negocio necesita <br/>para crecer digitalmente</h2>
+      <p class="section-desc">Diseñamos la infraestructura ideal para automatizar la captación de leads y la atención a tus clientes.</p>
+    </div>
+
+    <div class="features-container">
+      <div class="feature-card">
+        <div class="card-icon">🤖</div>
+        <h3 class="card-title">Chatbot Automatizado</h3>
+        <p class="card-desc">Responde al instante 24/7. Automatiza flujos de conversación en WhatsApp para calificar prospectos y agendar reuniones automáticamente en tu calendario.</p>
+        <ul class="card-list">
+          <li>Respuestas inteligentes e instantáneas</li>
+          <li>Calificación automática de prospectos</li>
+          <li>Agendamiento de citas integrado</li>
+        </ul>
+      </div>
+
+      <div class="feature-card highlighted">
+        <div class="card-icon">⚡</div>
+        <h3 class="card-title">CRM y Embudos</h3>
+        <p class="card-desc">Organiza tu flujo de ventas. Visualiza en qué etapa de interés se encuentra cada prospecto y realiza un seguimiento automático para cerrar más tratos.</p>
+        <ul class="card-list">
+          <li>Seguimiento visual del embudo</li>
+          <li>Recordatorios y alertas automáticas</li>
+          <li>Historial de contactos centralizado</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon">🎯</div>
+        <h3 class="card-title">Landing Pages</h3>
+        <p class="card-desc">Páginas de alta conversión ultra rápidas y responsivas. Diseñadas específicamente para recibir el tráfico de tus anuncios y convertir clics en clientes.</p>
+        <ul class="card-list">
+          <li>Carga veloz y SEO estructurado</li>
+          <li>Optimización para móviles</li>
+          <li>Llamadas a la acción persuasivas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-grid-section {
+    padding: 6rem 1.5rem;
+    background: var(--bg-primary);
+    position: relative;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+
+  .pre-title {
+    color: var(--accent-secondary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(163, 113, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(163, 113, 247, 0.1);
+  }
+
+  .feature-card.highlighted {
+    border-color: var(--border-highlight);
+    box-shadow: 0 4px 30px rgba(163, 113, 247, 0.05);
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, rgba(163, 113, 247, 0.03) 100%);
+  }
+
+  .feature-card.highlighted::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .card-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+  }
+
+  .card-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .card-list li::before {
+    content: '✓';
+    color: var(--accent-secondary);
+    font-weight: bold;
+  }
+
+  @media (max-width: 992px) {
+    .features-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .feature-card {
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+</style>

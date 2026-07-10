@@ -1,0 +1,182 @@
+---
+// src/components/landing/Footer.astro
+import { WHATSAPP_PHONE } from '../../utils/whatsapp';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          Ingeniería<span>enCancún</span>
+        </a>
+        <p class="brand-desc">Automatización de prospección y desarrollo de software de alta calidad para negocios locales.</p>
+        <div class="contact-info">
+          <p class="contact-item">📧 <a href="mailto:info@ingenieriaencancun.com">info@ingenieriaencancun.com</a></p>
+          <p class="contact-item">📞 <a href={`https://wa.me/${WHATSAPP_PHONE}`} target="_blank" rel="noopener noreferrer">+{WHATSAPP_PHONE}</a></p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="links-title">Navegación</h4>
+        <nav class="links-list">
+          <a href="#">Inicio</a>
+          <a href="#features">Automatización</a>
+          <a href="#pricing">Precios</a>
+          <a href="#faq">Preguntas</a>
+        </nav>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="links-title">Legal</h4>
+        <nav class="links-list">
+          <a href="#">Aviso de Privacidad</a>
+          <a href="#">Términos y Condiciones</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Ingeniería en Cancún. Todos los Derechos Reservados.</p>
+      <p class="signature">Tech Luxury & SEO</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #030305;
+    border-top: 1px solid var(--border-subtle);
+    padding: 5rem 1.5rem 2.5rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+  }
+
+  .logo span {
+    color: var(--accent-primary);
+    background: linear-gradient(135deg, var(--accent-primary) 30%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .brand-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    max-width: 320px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-item {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .contact-item a {
+    color: var(--text-primary);
+    transition: color var(--transition-fast);
+  }
+
+  .contact-item a:hover {
+    color: var(--accent-primary);
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1.25rem 0;
+    letter-spacing: -0.01em;
+  }
+
+  .links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .links-list a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+  }
+
+  .links-list a:hover {
+    color: #ffffff;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  .signature {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.15);
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>

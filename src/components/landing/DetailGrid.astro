@@ -1,0 +1,163 @@
+---
+// src/components/landing/DetailGrid.astro
+---
+
+<section class="detail-grid-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="pre-title">NUESTROS VALORES Y CALIDAD</span>
+      <h2 class="section-title">No solo diseñamos, <br/><span>automatizamos y escalamos</span></h2>
+      <p class="section-desc">Nos enfocamos en el retorno de inversión y la eficiencia técnica. Cada línea de código está diseñada para acelerar tu negocio.</p>
+    </div>
+
+    <div class="details-container">
+      <div class="detail-card">
+        <div class="detail-icon">🌐</div>
+        <h3 class="detail-title">Integración con CRM</h3>
+        <p class="detail-desc">Conectamos tus canales de ventas de WhatsApp directamente con tu CRM (HubSpot, Zoho, etc.) o bases de datos.</p>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-icon">🛡️</div>
+        <h3 class="detail-title">Soporte dedicado</h3>
+        <p class="detail-desc">Te acompañamos en todo el proceso. Ofrecemos soporte constante y mantenimiento técnico post-lanzamiento.</p>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-icon">⚙️</div>
+        <h3 class="detail-title">Automatización de leads</h3>
+        <p class="detail-desc">Eliminamos las tareas manuales. Los prospectos se asignan, agendan y reciben recordatorios de manera 100% automática.</p>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-icon">📱</div>
+        <h3 class="detail-title">Diseño responsivo</h3>
+        <p class="detail-desc">Tu sitio se verá espectacular y premium en cualquier pantalla: desde smartphones hasta pantallas de escritorio.</p>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-icon">🎨</div>
+        <h3 class="detail-title">Plantillas optimizadas</h3>
+        <p class="detail-desc">Diseños estructurados y testeados que maximizan la conversión de tus campañas publicitarias.</p>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-icon">📊</div>
+        <h3 class="detail-title">Analíticas detalladas</h3>
+        <p class="detail-desc">Medimos todo. Configuramos Google Analytics (GA4) para registrar cada conversión y optimizar tu pauta publicitaria.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .detail-grid-section {
+    padding: 6rem 1.5rem;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    background-image: radial-gradient(circle at 10% 20%, rgba(163, 113, 247, 0.02) 0%, transparent 40%);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+
+  .pre-title {
+    color: var(--accent-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-title span {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .details-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .detail-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .detail-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(45, 212, 191, 0.3);
+    transform: translateY(-3px);
+  }
+
+  .detail-icon {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    background: rgba(45, 212, 191, 0.1);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(45, 212, 191, 0.2);
+  }
+
+  .detail-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #ffffff;
+  }
+
+  .detail-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 992px) {
+    .details-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .details-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+</style>

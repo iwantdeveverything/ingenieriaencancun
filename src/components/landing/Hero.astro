@@ -1,0 +1,373 @@
+---
+import { getWhatsAppUrl, getPlanWhatsAppUrl } from '../../utils/whatsapp';
+
+const primaryCta = getPlanWhatsAppUrl('crecimiento');
+const secondaryCta = getWhatsAppUrl("Hola, me gustaría ver una demo de cómo funciona el chatbot con IA para mi negocio.");
+---
+
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="badge">IA + AUTOMATIZACIÓN DE VENTAS</div>
+      <h1 class="headline">
+        Haz que tu negocio <br/>
+        <span>responda, venda y crezca</span> <br/>
+        en automático
+      </h1>
+      <p class="subcopy">
+        La herramienta definitiva para automatizar tus canales de ventas, calificar prospectos y agendar citas 24/7 sin contratar más personal.
+      </p>
+      <div class="hero-buttons">
+        <a href={primaryCta} target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-ga-event="cta_click">
+          Comenzar Gratis
+        </a>
+        <a href={secondaryCta} target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-ga-event="cta_click">
+          Ver Demo en Vivo
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-avatars">
+          <div class="avatar">👨‍💻</div>
+          <div class="avatar">👩‍💼</div>
+          <div class="avatar">👨‍💼</div>
+        </div>
+        <p>Más de 50 negocios en Cancún ya automatizan sus ventas.</p>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="phone-mockup">
+        <div class="phone-header">
+          <div class="phone-user">
+            <span class="user-status"></span>
+            <div>
+              <p class="user-name">Asistente Inteligente</p>
+              <p class="user-info">En línea</p>
+            </div>
+          </div>
+        </div>
+        <div class="phone-chat">
+          <div class="chat-bubble user">
+            Hola! Me interesa información de los servicios.
+          </div>
+          <div class="chat-bubble bot">
+            ¡Hola! Con gusto. ¿Qué tipo de negocio tienes actualmente? 
+            <span class="options">1. Servicios Locales<br/>2. Inmobiliaria / Real Estate<br/>3. E-commerce</span>
+          </div>
+          <div class="chat-bubble user delay-1">
+            2. Inmobiliaria
+          </div>
+          <div class="chat-bubble bot delay-2">
+            ¡Excelente! 🏢 Con el plan <strong>Crecimiento Automático</strong> calificamos tus leads y agendamos directo en tu calendario. ¿Te gustaría agendar una demo en vivo?
+          </div>
+        </div>
+      </div>
+      <div class="glow-bg"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 6rem 1.5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .badge {
+    background: rgba(163, 113, 247, 0.1);
+    color: var(--accent-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(163, 113, 247, 0.2);
+    margin-bottom: 1.5rem;
+  }
+
+  .headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+  }
+
+  .headline span {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subcopy {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1.25rem;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    padding: 0.9rem 2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+    text-align: center;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, rgba(163, 113, 247, 0.8) 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(163, 113, 247, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(163, 113, 247, 0.5);
+    color: #ffffff;
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.03);
+    color: #ffffff;
+    border: 1px solid var(--border-subtle);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    color: #ffffff;
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .trust-avatars {
+    display: flex;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg-elevated);
+    border: 2px solid var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-left: -8px;
+  }
+
+  .avatar:first-child {
+    margin-left: 0;
+  }
+
+  .hero-trust p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* Phone Mockup visual */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .phone-mockup {
+    width: 300px;
+    height: 520px;
+    background: #0f0f15;
+    border: 8px solid #20202b;
+    border-radius: 36px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 40px rgba(163, 113, 247, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  .phone-header {
+    background: #161622;
+    padding: 1.5rem 1rem 0.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .phone-user {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .user-status {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-secondary);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-secondary);
+  }
+
+  .user-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .user-info {
+    font-size: 0.75rem;
+    color: var(--accent-secondary);
+    margin: 0;
+  }
+
+  .phone-chat {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 0);
+    background-size: 16px 16px;
+  }
+
+  .chat-bubble {
+    padding: 0.75rem 1rem;
+    border-radius: 18px;
+    font-size: 0.825rem;
+    max-width: 80%;
+    line-height: 1.4;
+    animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .chat-bubble.user {
+    background: #1f1f2e;
+    color: #e8e8ed;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+
+  .chat-bubble.bot {
+    background: linear-gradient(135deg, rgba(163, 113, 247, 0.15) 0%, rgba(45, 212, 191, 0.05) 100%);
+    color: #ffffff;
+    border: 1px solid rgba(163, 113, 247, 0.15);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+
+  .chat-bubble .options {
+    display: block;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    color: var(--accent-secondary);
+    font-weight: 500;
+  }
+
+  .delay-1 {
+    animation-delay: 1.5s;
+  }
+
+  .delay-2 {
+    animation-delay: 3s;
+  }
+
+  .glow-bg {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(163, 113, 247, 0.15) 0%, rgba(45, 212, 191, 0.05) 70%, transparent 100%);
+    z-index: 1;
+    filter: blur(40px);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-content {
+      align-items: center;
+      text-align: center;
+    }
+
+    .subcopy {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+
+    .hero-trust {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .headline {
+      font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    .phone-mockup {
+      width: 100%;
+      height: 480px;
+    }
+  }
+</style>

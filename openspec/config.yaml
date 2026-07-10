@@ -3,7 +3,7 @@ schema: spec-driven
 context: |
   Tech stack: Node.js (>=22.12.0), pnpm, Astro (v7.0.4), TypeScript
   Architecture: Static site / SSR (Astro default)
-  Testing: Not configured
+  Testing: vitest (Unit testing available)
   Style: default / tsconfig strict
 
 testing:

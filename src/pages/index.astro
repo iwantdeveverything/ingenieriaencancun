@@ -1,16 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/home/Hero.astro';
-import ProblemAgitation from '../components/home/ProblemAgitation.astro';
-import Solution from '../components/home/Solution.astro';
-import CTA from '../components/home/CTA.astro';
+import Navbar from '../components/landing/Navbar.astro';
+import Hero from '../components/landing/Hero.astro';
+import FeatureGrid from '../components/landing/FeatureGrid.astro';
+import DetailGrid from '../components/landing/DetailGrid.astro';
+import HowItWorks from '../components/landing/HowItWorks.astro';
+import Testimonials from '../components/landing/Testimonials.astro';
+import Pricing from '../components/landing/Pricing.astro';
+import FAQ from '../components/landing/FAQ.astro';
+import CTABanner from '../components/landing/CTABanner.astro';
+import Footer from '../components/landing/Footer.astro';
 ---
 
-<Layout title="Ingeniería en Cancún | Software a Medida y SEO Local">
+<Layout title="Ingeniería en Cancún | Automatización de Ventas y Chatbots con IA" description="Haz que tu negocio responda, venda y crezca en automático. La herramienta definitiva para automatizar tus ventas, calificar prospectos y agendar citas 24/7." fullWidth={true}>
+  <Navbar />
   <main>
     <Hero />
-    <ProblemAgitation />
-    <Solution />
-    <CTA />
+    <FeatureGrid />
+    <DetailGrid />
+    <Pricing />
+    <HowItWorks />
+    <Testimonials />
+    <FAQ />
+    <CTABanner />
   </main>
+  <Footer />
 </Layout>

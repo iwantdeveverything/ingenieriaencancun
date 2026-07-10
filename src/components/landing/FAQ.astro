@@ -1,0 +1,241 @@
+---
+// src/components/landing/FAQ.astro
+---
+
+<section id="faq" class="faq-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="pre-title">PREGUNTAS FRECUENTES</span>
+      <h2 class="section-title">¿Tienes dudas? <br/>Aquí están las respuestas</h2>
+      <p class="section-desc">Resolvemos las preguntas más comunes sobre nuestras integraciones, anuncios y automatizaciones.</p>
+    </div>
+
+    <div class="faq-list">
+      <!-- FAQ 1 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          ¿Qué incluye la automatización con IA?
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Incluye respuestas automáticas inteligentes por WhatsApp, Instagram o Facebook, filtrado de prospectos, agenda de citas, recordatorios automáticos y seguimiento post-contacto. Todo configurado específicamente para tu negocio.</p>
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          ¿La página web incluye hosting y dominio?
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>El diseño y desarrollo están incluidos en el paquete. Hosting y dominio se pueden gestionar junto contigo a costos externos, o si ya cuentas con ellos los integramos sin costo adicional.</p>
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          ¿Los anuncios están incluidos?
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>La gestión de campañas está incluida según el paquete (1-2 campañas en Impulso/Crecimiento, Meta + Google en Dominio 360). El presupuesto de pauta publicitaria es por separado y lo define el cliente.</p>
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          ¿Puedo contratar solo una landing page?
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Sí. Podemos cotizar proyectos individuales fuera de los paquetes. Escríbenos por WhatsApp y te damos un precio a medida según lo que necesites.</p>
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          ¿Todo se conecta a WhatsApp?
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Sí. WhatsApp es el canal principal de todos nuestros paquetes. Automatizaciones, formularios, CTAs y campañas de marketing se conectan directamente a tu número de WhatsApp Business.</p>
+        </div>
+      </details>
+
+      <!-- FAQ 6 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          ¿Se pueden personalizar los paquetes?
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Absolutamente. Los paquetes son nuestra base, pero podemos adaptarlos a las necesidades de tu negocio. Contáctanos y armamos la solución ideal para ti.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    padding: 6rem 1.5rem;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .pre-title {
+    color: var(--accent-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color var(--transition-fast);
+  }
+
+  .faq-item:hover {
+    border-color: rgba(163, 113, 247, 0.2);
+  }
+
+  .faq-item[open] {
+    border-color: var(--border-highlight);
+  }
+
+  .faq-question {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  /* Remove default indicator in Safari */
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-normal);
+  }
+
+  .faq-icon::before,
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--text-secondary);
+    transition: background var(--transition-fast), transform var(--transition-fast);
+  }
+
+  /* Horizontal line */
+  .faq-icon::before {
+    width: 14px;
+    height: 2px;
+  }
+
+  /* Vertical line */
+  .faq-icon::after {
+    width: 2px;
+    height: 14px;
+  }
+
+  .faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-item[open] .faq-icon::before,
+  .faq-item[open] .faq-icon::after {
+    background: var(--accent-secondary);
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .faq-answer p {
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .faq-question {
+      padding: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .faq-answer {
+      padding: 0 1.25rem 1.25rem;
+    }
+  }
+</style>
