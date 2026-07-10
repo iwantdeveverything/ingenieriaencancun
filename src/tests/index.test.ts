@@ -8,6 +8,7 @@ test('Index page renders components in spec-compliant order', async () => {
 
   // Check section existence
   expect(result).toContain('hero');
+  expect(result).toContain('logos-oasis-home');
   expect(result).toContain('feature-grid-section');
   expect(result).toContain('detail-grid-section');
   expect(result).toContain('pricing-section');
@@ -18,6 +19,7 @@ test('Index page renders components in spec-compliant order', async () => {
 
   // Verify order
   const heroIndex = result.indexOf('class="hero"');
+  const oasisLogosIndex = result.indexOf('class="logos-oasis-home"');
   const featureGridIndex = result.indexOf('class="feature-grid-section"');
   const detailGridIndex = result.indexOf('class="detail-grid-section"');
   const pricingIndex = result.indexOf('class="pricing-section"');
@@ -25,7 +27,8 @@ test('Index page renders components in spec-compliant order', async () => {
   const testimonialsIndex = result.indexOf('class="testimonials-section"');
   const faqIndex = result.indexOf('class="faq-section"');
 
-  expect(heroIndex).toBeLessThan(featureGridIndex);
+  expect(heroIndex).toBeLessThan(oasisLogosIndex);
+  expect(oasisLogosIndex).toBeLessThan(featureGridIndex);
   expect(featureGridIndex).toBeLessThan(detailGridIndex);
   expect(detailGridIndex).toBeLessThan(pricingIndex);
   expect(pricingIndex).toBeLessThan(howItWorksIndex);

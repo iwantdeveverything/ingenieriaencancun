@@ -1,0 +1,233 @@
+---
+// src/components/landing/OasisLogos.astro
+
+interface PartnerLogo {
+  id: string;
+  name: string;
+  imageUrl: string;
+}
+
+const OASIS_BASE = 'https://viajescaribemaya.com/img/logos-oasis-webp';
+
+const mainLogo = {
+  src: `${OASIS_BASE}/oasis.webp`,
+  alt: 'Logo Oasis',
+};
+
+const partnerLogos: PartnerLogo[] = [
+  { id: 'oasis-palm',        name: 'Oasis Palm All Inclusive',       imageUrl: `${OASIS_BASE}/Oasis-Palm-All-Inclusive.webp` },
+  { id: 'grand-oasis-palm',  name: 'Grand Oasis Palm',               imageUrl: `${OASIS_BASE}/Grand-Oasis-Palm.webp` },
+  { id: 'grand-oasis-cancun',name: 'Grand Oasis Cancun',             imageUrl: `${OASIS_BASE}/Grand-Oasis-Cancun.webp` },
+  { id: 'pyramid-cancun',    name: 'The Pyramid Cancun',             imageUrl: `${OASIS_BASE}/The-Pyramid-Cancun.webp` },
+  { id: 'sens-cancun',       name: 'The Sens Cancun CHIL',           imageUrl: `${OASIS_BASE}/The-Sens-Cancun-CHIL.webp` },
+  { id: 'sens-tulum',        name: 'The Sens Tulum Riviera',         imageUrl: `${OASIS_BASE}/The-Sens-Tulum-Riviera.webp` },
+  { id: 'sian-kaan-pyramid', name: 'The Sian Ka an At The Pyramid',  imageUrl: `${OASIS_BASE}/The-Sian-Ka-an-At-The-Pyramid.webp` },
+  { id: 'sian-kaan-sens',    name: 'The Sian Ka an At The Sens',     imageUrl: `${OASIS_BASE}/The-Sian-Ka-an-At-The-Sens.webp` },
+  { id: 'oh-cancun',         name: 'Oh Cancun',                      imageUrl: `${OASIS_BASE}/Oh-Cancun.webp` },
+];
+
+// Duplicate the array to create a seamless infinite scrolling marquee effect on desktop
+const duplicatedLogos = [...partnerLogos, ...partnerLogos];
+---
+
+<section class="logos-oasis-home">
+  <div class="container">
+    <h2 class="section-title">Colaboramos con las mejores marcas</h2>
+
+    <div class="logos-oasis-home__header">
+      <img
+        class="logos-oasis-home__brand"
+        src={mainLogo.src}
+        alt={mainLogo.alt}
+        width="104"
+        height="82"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
+    <!-- Marquee layout for Desktop (>= 768px) -->
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        {duplicatedLogos.map((logo) => (
+          <div class="logo-item">
+            <img
+              src={logo.imageUrl}
+              alt={logo.name}
+              width="104"
+              height="82"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Static Grid layout for Mobile (< 768px) -->
+    <div class="logos-grid">
+      {partnerLogos.map((logo) => (
+        <div class="logo-grid-item">
+          <img
+            src={logo.imageUrl}
+            alt={logo.name}
+            width="104"
+            height="82"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .logos-oasis-home {
+    padding: 3rem 1.5rem;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Desktop Marquee Styles */
+  .marquee-wrapper {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Masking/fading edges for a premium luxury look */
+  .marquee-wrapper::before,
+  .marquee-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .marquee-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-primary) 0%, transparent 100%);
+  }
+
+  .marquee-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-primary) 0%, transparent 100%);
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: marquee 25s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  .logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 160px;
+    height: 60px;
+  }
+
+  .logo-item img,
+  .logo-grid-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 1;
+  }
+
+  /* Mobile Grid Styles */
+  .logos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .logo-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    padding: 0.5rem;
+  }
+
+  /* Keyframe Marquee Animation */
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  /* Responsive Breakpoints */
+  @media (min-width: 768px) {
+    .marquee-wrapper {
+      display: block;
+    }
+    .logos-grid {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .logo-item {
+      width: 180px;
+    }
+    .marquee-track {
+      gap: 5rem;
+    }
+  }
+
+  /* Accessibility settings */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+    }
+    
+    .marquee-wrapper {
+      display: block;
+    }
+    
+    .marquee-wrapper::before,
+    .marquee-wrapper::after {
+      display: none;
+    }
+  }
+</style>
