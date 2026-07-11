@@ -12,15 +12,18 @@
     "astro": "astro",
     "test": "vitest run",
     "test:watch": "vitest",
+    "typecheck": "astro check",
     "prepare": "husky"
   },
   "dependencies": {
     "astro": "^7.0.4"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "@commitlint/cli": "^21.2.0",
     "@commitlint/config-conventional": "^21.2.0",
     "husky": "^9.1.7",
+    "typescript": "^5.9.3",
     "vitest": "^4.1.9"
   }
 }

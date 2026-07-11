@@ -32,8 +32,8 @@ rules:
     tdd: false
     test_command: ""
   verify:
-    test_command: ""
-    build_command: "npm run build"
+    test_command: "pnpm test && pnpm typecheck && pnpm build"
+    build_command: "pnpm build"
     coverage_threshold: 0
   archive:
     - Warn before merging destructive deltas
