@@ -80,10 +80,12 @@
   }
 
   .section-title {
-    font-size: 2.5rem;
+    /* clamp: min=1.4rem at narrow screens, fluid, max=2.5rem on desktop */
+    font-size: clamp(1.4rem, 5.5vw, 2.5rem);
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
+    overflow-wrap: break-word;
   }
 
   .section-title span {
@@ -154,10 +156,6 @@
   @media (max-width: 600px) {
     .details-container {
       grid-template-columns: 1fr;
-    }
-    
-    .section-title {
-      font-size: 2rem;
     }
   }
 </style>

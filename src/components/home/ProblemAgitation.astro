@@ -83,11 +83,11 @@
 
 <script>
   // Intersection Observer for scroll micro-animations
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll<HTMLElement>('.card');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.animationPlayState = 'running';
+        (entry.target as HTMLElement).style.animationPlayState = 'running';
         observer.unobserve(entry.target);
       }
     });
