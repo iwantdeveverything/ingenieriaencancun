@@ -72,6 +72,9 @@ const ctaUrl = getWhatsAppUrl("Hola, me interesa obtener más información sobre
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-subtle);
+    /* Prevent any child from causing horizontal scroll.
+       overflow-x: clip (unlike hidden) does not break position:sticky */
+    overflow-x: clip;
   }
 
   .navbar-container {
@@ -200,6 +203,11 @@ const ctaUrl = getWhatsAppUrl("Hola, me interesa obtener más información sobre
   }
 
   @media (max-width: 768px) {
+    .navbar-container {
+      /* Reduce horizontal padding on narrow viewports to keep content within bounds */
+      padding: 1rem;
+    }
+
     .nav-links {
       display: none;
     }
